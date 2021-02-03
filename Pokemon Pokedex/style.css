@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-image: url('https://wallpapercave.com/wp/Iibrz0V.jpg') ;
+    background-color: lavender;
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+h1{
+    color: white;
+}
+
+.poke-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+    justify-items: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.pokemon {
+    position: relative;
+    background-color: #eee;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    animation-name: pokemon;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes pokemon {
+    0% {
+        background-color: white;
+        left: -1000px;
+        border-radius: 0 0 0 0;
+    }
+    25% {
+        background-color: white;
+        left: 1000px;
+        border-radius: 25% 0 0 0;
+    }
+    75% {
+        background-color: white;
+        left: -500px;
+        border-radius: 0 0 0 0;
+    }
+      100% {
+        background-color: white;
+        left: 0px;
+        border-radius: 50% 50% 50% 50%;
+      }
+
+}
+
+.img-container {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 70%;
+    max-height: 70%;
+    margin-top: 55px;
+}
+
+.type {
+    text-align: center; 
+}
+
+.name {
+    background-color: darkorchid;
+    text-align: center;
+    margin-left: 95px;
+    max-width: 50%;
+}
+
+#butgetPokemonButtonon {
+    transition-duration: 0.4s;
+}
+  
+#getPokemonButton:hover {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+#removePokemonButton {
+transition-duration: 0.4s;
+}
+
+#removePokemonButton:hover {
+background-color: #ff0000;
+color: white;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
