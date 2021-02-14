@@ -53,7 +53,7 @@ function pokemonJson(id) {
 
 
 function createPokemonCard(pokemon) {
-  // console.log(pokemon)
+  console.log(pokemon)
   const pokemonEl = document.createElement('div')
 
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)

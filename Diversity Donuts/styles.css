@@ -1,0 +1,291 @@
+/* Core Styles */
+
+body {
+    margin: 0;
+    background: #0B3037;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+.btn {
+    display: inline-block;
+    background: #333333BD; /* Last 2 Characters (BD) - Hexidecimal Alpha Value  */
+    color: #ffffff;
+    text-decoration: none;
+    margin: .5em 0;
+    padding: 1em 2em;
+    border: 1px solid #6666;
+}
+
+.btn:hover {
+    background: #eaeaea;
+    color: #333;
+}
+
+/* Header */
+
+#showcase {
+    min-height: 450px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#showcase .bg-image {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    background: #333 url('./images/pexels-igor-ovsyannykov-205961.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#showcase h1 {
+    padding-top: 3em;
+    padding-bottom: 0;
+}
+
+#showcase .content-wrap {
+    padding: 0 1.5em;
+}
+
+/* Section A */
+
+#section-a {
+    background: #eaeaea; 
+    color: #333;
+    padding-bottom: 2em;
+}
+
+#section-a .content-wrap {
+    padding: 0 1.5em;
+}
+
+/* Section B */
+
+#section-b {
+    padding: 2em 1em 1em;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li {
+    margin-bottom: 1em;
+    background: #ffffff;
+    color: #333;
+    position: relative;
+    animation-name: donuts;
+    animation-duration: 4s;
+}
+
+@keyframes donuts {
+    0% {
+        left: -100em;
+    }
+
+    100% {
+        left: 0em;
+        top: 0em;
+    }
+}
+
+#section-b2 div:nth-child(odd) {
+    position: relative;
+    animation-name: donutsFrames;
+    animation-duration: 6s;
+}
+
+@keyframes donutsFrames {
+    0% {
+        left: -200em;
+    }
+
+    100% {
+        left: 0em;
+        top: 0em;
+    }
+}
+
+
+
+#section-b2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+#section-b2 .container  {
+    display: flex;
+    width: 90vw;
+} 
+
+#section-b2 .panel {
+    background-size: auto 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    color: #ffffff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 0 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+#section-b2 .panel.active {
+    flex: 5;
+}
+
+/* Section C */
+
+#section-c {
+    background: #ffffff;
+    color: #333;
+    padding: 2em;
+}
+
+/* Section D / Boxes */
+
+#section-d .box {
+    padding: 2em;
+    color: #ffffff;
+}
+
+#section-d .box:first-child {
+    background: #02A9C4;
+}
+
+#section-d div {
+    position: relative;
+    animation-name: box;
+    animation-duration: 4s;
+}
+
+@keyframes box {
+    0% {
+        bottom: -900px;
+    }
+
+    25% {
+        bottom: -500px;
+    }
+
+    75% {
+        botom: -200px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+/* Footer */
+
+#main-footer {
+    background: #333;
+    color: #ffffff;
+    padding: 2em;
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media(max-width: 680px) {
+    .panel:nth-of-type(3),
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+
+
+@media(min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .content-wrap {
+        grid-column: 2/4;
+    }
+
+    #section-b ul {
+        grid-column: 1/6;
+        display: flex;
+        justify-content: space-between;
+        margin: 2em
+    }
+
+    #section-b li {
+        width: 31%;
+    }
+
+    .box {
+        grid-column: span 2;
+    }
+
+    #main-footer div {
+        grid-column: span 12;
+    }
+
+}
+
+@media(min-width: 1450px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .content-wrap {
+        grid-column: 2/4;
+    }
+
+    #section-b ul {
+        grid-column: 2/4;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #section-b li {
+        width: 31%;
+    }
+
+    .box {
+        grid-column: span 2;
+    }
+
+    #main-footer div {
+        grid-column: span 12;
+    }
+
+}
